@@ -4,7 +4,7 @@ const scrollToTopBtn = document.getElementById("scrollToTopBtn"); // using id
 
 // now we need to show the button only when user scrolls down
 window.onscroll = function () {
-  if (document.body.scrollTop > 2 || document.documentElement.scrollTop > 2) {
+  if (document.body.scrollTop > 7 || document.documentElement.scrollTop > 7) {
     scrollToTopBtn.style.display = "block";
   } else {
     scrollToTopBtn.style.display = "none";
@@ -16,3 +16,22 @@ scrollToTopBtn.onclick = function () {
   document.body.scrollTop = 0; // for Safari
   document.documentElement.scrollTop = 0; // for Chrome, Firefox, IE and Opera
 };
+
+const faders = document.querySelectorAll(".fade-in");
+
+const appearOptions = {
+  threshold: 0.2,
+  rootMargin: "0px 0px -50px 0px",
+};
+
+const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("appear");
+    observer.unobserve(entry.target);
+  });
+}, appearOptions);
+
+faders.forEach((fader) => {
+  appearOnScroll.observe(fader);
+});

@@ -2,82 +2,101 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gouranga | Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styleApple.css" />
 </head>
-<link rel="stylesheet" href="style.css">
-
-<!-- <button id="scrollToTopBtn">Click here to Scroll Up</button> -->
-<!-- <button id="scrollToTopBtn">↑</button> -->
-<button id="scrollToTopBtn">↑</button>
-<script src="script.js"></script>
 
 <body>
-    <header>
-        <h1>Gouranga Bhattacherjee</h1>
-        <!-- navigation bar here -->
-        <nav>
-            <a href="#about">About</a>
+    <header class="navbar">
+        <div class="nav-logo">MyPortfolio</div>
+        <nav class="nav-links">
+            <a href="#intro">Introduction</a>
             <a href="#projects">Projects</a>
+            <a href="#videos">Videos</a>
+            <a href="#cv">CV</a>
             <a href="#contact">Contact</a>
-            <a href="https://github.com/rookiedev25">GitHub</a>
         </nav>
     </header>
 
-    <!-- all my sections that are part of page: -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi, I'm Gouranga Bhattacherjee, a passionate web developer with a knack for creating dynamic and responsive
-            web applications. I have a strong foundation in HTML, CSS, and JavaScript, and I'm always eager to learn new
-            technologies and improve my skills. I enjoy solving complex problems and turning ideas into reality through
-            code. In my free time, I love exploring new programming languages and frameworks, as well as contributing to
-            open-source projects. I'm excited to connect with like-minded individuals and collaborate on innovative
-            projects that make a difference.</p>
-        <p>My goal is to become a full-stack developer and work on projects that have a positive impact on people's
-            lives. I believe in the power of technology to transform the world, and I'm committed to using my skills to
-            contribute to that transformation. Whether it's building a simple web application or a complex system, I'm
-            always up for a challenge and ready to learn from every experience.</p>
-        </p>
+    <!-- HERO SLIDER -->
+    <section class="hero" id="intro">
+        <div class="slider">
+            <div class="slide active"
+                style="background-image: url('https://www.apple.com/v/home/ak/images/heroes/iphone15-pro/hero_iphone15pro__i70z9oz3hj2i_large.jpg');">
+                <div class="hero-text fade-in">
+                    <h1>Hello, I'm [Your Name]</h1>
+                    <p>Creative Developer & Storyteller</p>
+                </div>
+            </div>
+            <div class="slide"
+                style="background-image: url('https://www.apple.com/v/home/ak/images/heroes/macbook-air-m3/hero_macbook_air__f6n9w2u4devm_large.jpg');">
+            </div>
+            <div class="slide"
+                style="background-image: url('https://www.apple.com/v/home/ak/images/heroes/ipad-pro/hero_ipad_pro__bpt7a9d8sh42_large.jpg');">
+            </div>
+        </div>
     </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>Here are some projects that I have created through my learning. Each project showcases my skills and
-            dedication to web development.</p>
-        <p>Feel free to explore the details of each project below:</p>
-        <!-- this is a project card -->
-        <div class="projectcard">
-            <h3>Caesar Cipher</h3>
-            <p>A simple web application that implements the Caesar cipher encryption and decryption algorithm. It allows
-                users to input text, select a shift value, and see the encrypted or decrypted result instantly.</p>
-            <p>This project demonstrates my understanding of string manipulation, user input handling, and basic
-                cryptographic concepts. It is built using HTML, CSS, and JavaScript, and features a clean and intuitive
-                user interface.</p>
-        </div>
-        <div class="projectcard">
-            <h3>Calculator</h3>
-            <p>A simple calculator using JavaScript Switch-case logic. This project allows users to perform basic
-                arithmetic operations such as addition, subtraction, multiplication, and division. It features a
-                user-friendly interface and demonstrates my ability to implement logical operations and handle user
-                inputs effectively.</p>
-        </div>
-        <div class="projectcard">
-            <h3>Clock</h3>
-            <p>A simple clock using the Date class in JavaScript. This project dynamically displays the current time,
-                updating every second to ensure accuracy. It showcases my ability to work with JavaScript's Date object,
-                manipulate the DOM, and implement real-time functionality. The clock features a clean design and serves
-                as a practical example of integrating JavaScript logic into a web application.</p>
-        </div>
 
+    <!-- PROJECTS -->
+    <section class="projects fade-in" id="projects">
+        <h2>Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Health Plan Generator</h3>
+                <p>A tool to create personalized diet & fitness plans.</p>
+                <a href="#" target="_blank">View Project</a>
+            </div>
+            <div class="card">
+                <h3>Technical Writing Tool</h3>
+                <p>Automatically applies Siemens style guide to docs.</p>
+                <a href="#" target="_blank">View Project</a>
+            </div>
+        </div>
     </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: rookiedeveloper.at.localhost@gmail.com</p>
+
+    <!-- VIDEOS -->
+    <section class="videos fade-in" id="videos">
+        <h2>Short Films & Videos</h2>
+        <div class="grid">
+            <div class="card">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Video 1"
+                    allowfullscreen></iframe>
+                <p>Title: Exploring Creativity</p>
+            </div>
+            <div class="card">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Video 2"
+                    allowfullscreen></iframe>
+                <p>Title: Storytelling Through Film</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV SECTION -->
+    <section class="fade-in" id="cv">
+        <h2>Download My CV</h2>
+        <div class="center">
+            <a class="btn" href="your-cv-link.pdf" target="_blank">📄 View CV</a>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section class="fade-in" id="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
     </section>
 
     <footer>
-        <p>&copy; 2025 Gouranga. All rights reserved</p>
+        <p>© 2025 Your Name. Inspired by Apple.</p>
     </footer>
+
+    <script src="styleApple.js"></script>
 </body>
 
 </html>
