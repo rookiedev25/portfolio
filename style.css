@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* for responsive design: */
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    header nav {
+        margin-top: 10px;
+    }
+
+    header nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+}
+
+
+body {
+    background-color: #f5f5f5;
+    font-family: poppins, sans-serif;
+    font-size: 16px;
+    color: #333;
+
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+}
+
+h3 {
+    font-size: 24px;
+    margin: 10px 0;
+    text-align: left;
+    padding-left: 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+section contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.projectcard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* to add scroll behavior smooth */
+html {
+    scroll-behavior: smooth;
+}
+
+/* adding style to the scrollToTopBtn */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: none;
+    /* Hidden by default */
+}
